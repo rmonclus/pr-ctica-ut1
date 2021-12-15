@@ -40,12 +40,15 @@ def modificarNotas():
     nombre = input(' Indique el nombre del alumno > ')
     i = existeAlumno(nombre)
     if i > -1:
-        alumnos[i]['notas'][0] = int(input('Indique la nota de Análisis forense > '))
-        alumnos[i]['notas'][1] = int(input('Indique la nota de Bastionado de redes > '))
-        alumnos[i]['notas'][2] = int(input('Indique la nota de Hacking ético > '))
-        alumnos[i]['notas'][3] = int(input('Indique la nota de Incidentes de ciberseguridad > '))
-        alumnos[i]['notas'][4] = int(input('Indique la nota de Normativa de ciberseguridad > '))
-        alumnos[i]['notas'][5] = int(input('Indique la nota de Producción segura > '))
+        opcion = 0
+        while (opcion < 1 or opcion > 3):
+            print("[1] Análisis forense ")
+            print("[2] Bastionado de redes ")
+            print("[3] Hacking ético ") 
+            opcion = int(input("Escoja el módulo del que quiere modificar las notas"))
+        
+        alumnos[i]['notas'][opcion - 1] = int(input('Indique la nota nueva > '))
+        
     else:
         print('¡No existe ningún alumno con ese nombre!')
 
