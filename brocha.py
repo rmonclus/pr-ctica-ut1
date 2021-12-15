@@ -37,7 +37,17 @@ def agregarNotas():
             print('¡No existe ningún alumno con ese nombre!')
             
 def modificarNotas():
-    print("En breve estará listo")
+    nombre = input(' Indique el nombre del alumno > ')
+    i = existeAlumno(nombre)
+    if i > -1:
+        alumnos[i]['notas'][0] = int(input('Indique la nota de Análisis forense > '))
+        alumnos[i]['notas'][1] = int(input('Indique la nota de Bastionado de redes > '))
+        alumnos[i]['notas'][2] = int(input('Indique la nota de Hacking ético > '))
+        alumnos[i]['notas'][3] = int(input('Indique la nota de Incidentes de ciberseguridad > '))
+        alumnos[i]['notas'][4] = int(input('Indique la nota de Normativa de ciberseguridad > '))
+        alumnos[i]['notas'][5] = int(input('Indique la nota de Producción segura > '))
+    else:
+        print('¡No existe ningún alumno con ese nombre!')
 
 def mostrarNotas():
         nombre = input(' Indique el nombre del alumno > ')
