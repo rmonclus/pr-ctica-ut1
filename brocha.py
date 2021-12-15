@@ -37,7 +37,7 @@ def agregarNotas():
             print('¡No existe ningún alumno con ese nombre!')
             
 def modificarNotas():
-    print("No implementado")
+    print("En breve estará listo")
 
 def mostrarNotas():
         nombre = input(' Indique el nombre del alumno > ')
