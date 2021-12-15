@@ -4,10 +4,11 @@ alumnos = []
 
 
 def existeAlumno(nombre):
+    posicion = -1
     for i in range(len(alumnos)):
         if (alumnos[i]['nombre'] == nombre):
-            return i
-    return -1
+            posicion = i
+    return posicion
 
 def agregarAlumno():
     nombre = input('  Indique el nombre del alumno > ')
@@ -35,7 +36,9 @@ def agregarNotas():
         else:
             print('¡No existe ningún alumno con ese nombre!')
             
-            
+def modificarNotas():
+    print("No implementado")
+
 def mostrarNotas():
         nombre = input(' Indique el nombre del alumno > ')
         i = existeAlumno(nombre)
